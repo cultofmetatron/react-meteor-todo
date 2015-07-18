@@ -11,6 +11,7 @@ if (Meteor.isClient) {
   Template.hello.events({
     'click button': function () {
       // increment the counter when button is clicked
+      debugger
       Session.set('counter', Session.get('counter') + 1);
     }
   });
@@ -19,5 +20,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
+    // console.log('hello world');
+    
   });
 }
