@@ -1,13 +1,25 @@
 <head>
   <title>simple-todos</title>
 </head>
-
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+  <div class="container">
+    <header>
+      <h1>Todo list</h1>
+    </header>
+    <form class="new-task">
+      <input type="text" name="text" placeholder="Add task" />
+    </form>
+    
+    <ul>{{#each tasks}} {{> task}} {{/each}}
+       
+    </ul>
+    
+  </div>
 </body>
 
+<template name="task">
+  <li>{{text}} <a href="#" class="deleter" data-idtag="{{_id}}" >delete</a></li>
+</template>
 <template name="hello">
   <button>Click Me</button>
   <p>You've pressed the button {{counter}} times.</p>
