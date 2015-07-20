@@ -7,20 +7,17 @@
       <h1>Todo list</h1>
     </header>
     <form class="new-task">
-      <input type="text" name="text" placeholder="Add task" />
+      Add Task: <input type="text" name="text" placeholder="Add task" />
     </form>
     
-    <ul>{{#each tasks}} {{> task}} {{/each}}
-       
-    </ul>
+    {{> todolist}}
+
     
   </div>
 </body>
 
-<template name="task">
-  <li>{{text}} <a href="#" class="deleter" data-idtag="{{_id}}" >delete</a></li>
-</template>
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="todolist">
+  <div>
+    {{>React component=TodoList }}
+  </div>
 </template>

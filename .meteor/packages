@@ -8,3 +8,5 @@ meteor-platform
 autopublish
 insecure
 react
+stevezhu:lodash
+react-template-helper
